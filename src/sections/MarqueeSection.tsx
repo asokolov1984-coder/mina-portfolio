@@ -1,31 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 
-const GIFS = [
-  'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
-  'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
-  'https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
-  'https://motionsites.ai/assets/hero-asme-preview-B_nGDnTP.gif',
-  'https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif',
-  'https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif',
-  'https://motionsites.ai/assets/hero-terra-preview-BFjrCr7T.gif',
-  'https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif',
-  'https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif',
-  'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif',
-  'https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif',
-  'https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif',
-  'https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif',
-  'https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif',
-  'https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif',
-  'https://motionsites.ai/assets/hero-new-era-preview-CocuDUm9.gif',
-  'https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif',
-  'https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif',
-  'https://motionsites.ai/assets/hero-celestia-preview-0yO3jXO8.gif',
+// Six generated hero-style renders; each row is tripled for seamless scroll, row two runs them in reverse order.
+const TILES = [
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090155_2ffdac3c-85e1-438f-b041-675145a03a1c.png',
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090212_05155ec1-a1ae-4439-b129-e76640f11844.png',
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090232_28ada7ee-b8c7-4e8a-822a-7da08eac7c12.png',
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090249_888251d5-3b9b-4b1c-98ba-fc5962a21f34.png',
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090308_772490c7-6686-4485-abad-03a65b471368.png',
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090331_5a97bb70-c2c5-4544-bf36-e640f73c0e82.png'
 ];
 
-const ROW1 = GIFS.slice(0, 11);
-const ROW2 = GIFS.slice(11);
+const ROW1 = TILES;
+const ROW2 = [...TILES].reverse();
 const triple = <T,>(a: T[]) => [...a, ...a, ...a];
 
 function Row({ images, transform }: { images: string[]; transform: string }) {

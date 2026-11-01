@@ -3,24 +3,25 @@ import { useRef } from 'react';
 import FadeIn from '../components/FadeIn';
 import LiveProjectButton from '../components/LiveProjectButton';
 
-const IMG = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_';
-const img = (id: string) => `${IMG}${id}.png&w=1280&q=85`;
+// Renders generated for the site, served from the owner's Higgsfield library.
+const IMG = 'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_';
+const img = (id: string) => `${IMG}${id}.png`;
 
 const PROJECTS = [
   {
     n: '01', name: 'Nextlevel Studio', category: 'Client',
-    col1: [img('20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db'), img('20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8')],
-    col2: img('20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327'),
+    col1: [img('20261101_085859_0cd97d1a-48b2-4385-8962-606ff8aaee2c'), img('20261101_085924_1bbe62f9-cfd8-483b-a6a7-7768a23812dc')],
+    col2: img('20261101_085944_f1f9d8b0-3001-418e-be97-58db565b7916'),
   },
   {
     n: '02', name: 'Aura Brand Identity', category: 'Personal',
-    col1: [img('20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f'), img('20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1')],
-    col2: img('20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea'),
+    col1: [img('20261101_090001_80f22dba-85f1-4b0a-96a6-d62a1cf6dbcb'), img('20261101_090019_a563094c-9440-43d0-a6da-ae8276aae69d')],
+    col2: img('20261101_090038_292c0cbd-a6fa-493e-ac1a-00632a08d246'),
   },
   {
     n: '03', name: 'Solaris Digital', category: 'Client',
-    col1: [img('20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f'), img('20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b')],
-    col2: img('20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee'),
+    col1: [img('20261101_090055_1aa9025a-8ebb-4ea2-888d-2824b4f8353f'), img('20261101_090112_94913d1d-2efa-4e01-86cb-c20fbf550b46')],
+    col2: img('20261101_090134_c53556b5-a400-4ef8-a2cd-aed10029be1c'),
   },
 ];
 
