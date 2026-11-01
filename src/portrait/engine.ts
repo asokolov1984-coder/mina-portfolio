@@ -3,14 +3,14 @@
 // A photo-like head on a soft sheet. Every expression, gaze and blink is a separately generated
 // picture of the same face; the code only decides which one to show and makes the skin move.
 // The body of this function is the engine verbatim; it is only wrapped so React can start it once the markup exists.
-export function startLivingPortrait() {
+export function startLivingPortrait(restUrl: string) {
   if (typeof window === 'undefined' || window.__faceEngine) return;
   (() => {
     // Pictures of Alla. Only her resting face exists so far: every expression, gaze and blink needs its own
     // pixel-aligned picture of HER, and a name missing here is simply never shown (the engine skips it).
-    // Add e.g. closed: '/alla-closed.png', half: '/alla-half.png', winkl: '/alla-winkl.png' as they are made.
+    // Add e.g. closed: allaClosedUrl, half: allaHalfUrl as they are made, each imported as an asset like the resting one.
     const url = id => id;
-    const IDS = {rest: '/alla.png'};
+    const IDS = {rest: restUrl};
 
     // sixteen gaze directions plus half and closed lids: each is a whole picture of her, swapped like any other face
     const RING = ['e', 'ene', 'ne', 'nne', 'n', 'nnw', 'nw', 'wnw', 'w', 'wsw', 'sw', 'ssw', 's', 'sse', 'se', 'ese'];

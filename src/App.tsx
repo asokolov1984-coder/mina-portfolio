@@ -5,11 +5,12 @@ import AboutSection from './sections/AboutSection';
 import ServicesSection from './sections/ServicesSection';
 import ProjectsSection from './sections/ProjectsSection';
 import { startLivingPortrait } from './portrait/engine';
+import alla from './assets/alla.png';
 
 export default function App() {
   // The engine binds to the portrait markup and every .contact-btn, so it starts once the whole page is in the DOM.
   useEffect(() => {
-    startLivingPortrait();
+    startLivingPortrait(alla);
   }, []);
 
   return (

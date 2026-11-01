@@ -1,6 +1,6 @@
 import FadeIn from '../components/FadeIn';
 
-const FALLBACK = '/alla.png';
+import FALLBACK from '../assets/alla.png';
 
 // Markup matches the engine's ids exactly; the engine is attached once from App.
 export default function LivingPortrait() {
