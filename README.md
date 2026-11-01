@@ -1,4 +1,4 @@
-# Mina — 3D Creator
+# Alla — 3D Creator
 
 Portfolio landing page with an interactive WebGL "living portrait".
 
