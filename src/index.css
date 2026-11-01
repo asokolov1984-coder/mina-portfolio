@@ -60,7 +60,8 @@ body,
 #faceHand.shut .open { display: none; }
 #faceHand.shut .grab { display: block; }
 
-/* portrait size per breakpoint */
-@media (min-width: 640px) { .hero-portrait-wrap { width: 500px; } }
-@media (min-width: 768px) { .hero-portrait-wrap { width: 600px; } }
-@media (min-width: 1024px) { .hero-portrait-wrap { width: clamp(640px, 78vh, 46vw); } }
+/* portrait size per breakpoint: sized by height so the bust never swallows the heading or the bottom bar */
+.hero-portrait-wrap { width: min(300px, 40vh); }
+@media (min-width: 640px) { .hero-portrait-wrap { width: min(360px, 40vh); } }
+@media (min-width: 768px) { .hero-portrait-wrap { width: min(420px, 40vh); } }
+@media (min-width: 1024px) { .hero-portrait-wrap { width: clamp(340px, 40vh, 30vw); } }
