@@ -3,25 +3,32 @@ import { useRef } from 'react';
 import FadeIn from '../components/FadeIn';
 import LiveProjectButton from '../components/LiveProjectButton';
 
-// Renders generated for the site, served from the owner's Higgsfield library.
-const IMG = 'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_';
-const img = (id: string) => `${IMG}${id}.png`;
+// Renders generated for the site, bundled so they load everywhere.
+import w00 from '../assets/work/00.webp';
+import w01 from '../assets/work/01.webp';
+import w02 from '../assets/work/02.webp';
+import w03 from '../assets/work/03.webp';
+import w04 from '../assets/work/04.webp';
+import w05 from '../assets/work/05.webp';
+import w06 from '../assets/work/06.webp';
+import w07 from '../assets/work/07.webp';
+import w08 from '../assets/work/08.webp';
 
 const PROJECTS = [
   {
     n: '01', name: 'Nextlevel Studio', category: 'Client',
-    col1: [img('20261101_085859_0cd97d1a-48b2-4385-8962-606ff8aaee2c'), img('20261101_085924_1bbe62f9-cfd8-483b-a6a7-7768a23812dc')],
-    col2: img('20261101_085944_f1f9d8b0-3001-418e-be97-58db565b7916'),
+    col1: [w00, w01],
+    col2: w02,
   },
   {
     n: '02', name: 'Aura Brand Identity', category: 'Personal',
-    col1: [img('20261101_090001_80f22dba-85f1-4b0a-96a6-d62a1cf6dbcb'), img('20261101_090019_a563094c-9440-43d0-a6da-ae8276aae69d')],
-    col2: img('20261101_090038_292c0cbd-a6fa-493e-ac1a-00632a08d246'),
+    col1: [w03, w04],
+    col2: w05,
   },
   {
     n: '03', name: 'Solaris Digital', category: 'Client',
-    col1: [img('20261101_090055_1aa9025a-8ebb-4ea2-888d-2824b4f8353f'), img('20261101_090112_94913d1d-2efa-4e01-86cb-c20fbf550b46')],
-    col2: img('20261101_090134_c53556b5-a400-4ef8-a2cd-aed10029be1c'),
+    col1: [w06, w07],
+    col2: w08,
   },
 ];
 

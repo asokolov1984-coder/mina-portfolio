@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 
+import t09 from '../assets/work/09.webp';
+import t10 from '../assets/work/10.webp';
+import t11 from '../assets/work/11.webp';
+import t12 from '../assets/work/12.webp';
+import t13 from '../assets/work/13.webp';
+import t14 from '../assets/work/14.webp';
+
 // Six generated hero-style renders; each row is tripled for seamless scroll, row two runs them in reverse order.
-const TILES = [
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090155_2ffdac3c-85e1-438f-b041-675145a03a1c.png',
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090212_05155ec1-a1ae-4439-b129-e76640f11844.png',
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090232_28ada7ee-b8c7-4e8a-822a-7da08eac7c12.png',
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090249_888251d5-3b9b-4b1c-98ba-fc5962a21f34.png',
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090308_772490c7-6686-4485-abad-03a65b471368.png',
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3ESgq2B6qtlnB3MO1NzrHPw6Q2U/hf_20261101_090331_5a97bb70-c2c5-4544-bf36-e640f73c0e82.png'
-];
+const TILES = [t09, t10, t11, t12, t13, t14];
 
 const ROW1 = TILES;
 const ROW2 = [...TILES].reverse();
